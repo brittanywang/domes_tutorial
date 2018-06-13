@@ -1,0 +1,26 @@
+{
+  "name": "reacttutorial",
+  "version": "1.0.0",
+  "description": "Some basic ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittanywang/reactTutorial.git"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "author": "Brittany Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brittanywang/reactTutorial/issues"
+  },
+  "homepage": "https://github.com/brittanywang/reactTutorial#readme",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  }
+}
