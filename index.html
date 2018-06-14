@@ -12,6 +12,7 @@
 <script src="app.js"></script>
 <script type="text/babel">
   // React code goes here.
+  
   const OurFirstComponent = () => {
     return (
     //stuff to make this component goes here
@@ -29,8 +30,27 @@
     );
   }
 
+  //another way to write class components
+  //class components must have a function called `render()`, which returns the JSX
+  //of the component. 
+  /*
+  class Container extends React.Component{
+    render(){
+      return(
+        <div>
+          <h1>I am the parent!</h1>
+          <OurFirstComponent/>
+          </div>
+      );
+    }
+  }
+
+  const placeWeWantToPutComponent = document.getElementById('hook');
+  ReactDOM.render(<Container />, placeWeWantToPutComponent);
+*/
+
   const placeWeWantToPutComponent = document.getElementById('hook');
   //const secondplaceWeWantToPutComponent = document.getElementById('hook');
-  ReactDOM.render(<Container />, placeWeWantToPutComponent);  
+  ReactDOM.render(Container(), placeWeWantToPutComponent);  
   
 </script>
