@@ -12,4 +12,24 @@
 <script src="app.js"></script>
 <script type="text/babel">
   // React code goes here.
+  const OurFirstComponent = () => {
+    return (
+    //stuff to make this component goes here
+    //<h1> @THEBRITTANYWANG's GROOVY MUSIC! </h1>
+    <h1> I am the child! </h1> 
+  );
+  }
+
+  function Container(){
+    return (
+      <div>
+        <h1> I am the parent component! </h1>
+      </div>
+    )
+  }
+
+  const placeWeWantToPutComponent = document.getElementById('hook');
+  //const secondplaceWeWantToPutComponent = document.getElementById('hook');
+  ReactDOM.render(</Container>, placeWeWantToPutComponent);  
+  
 </script>
