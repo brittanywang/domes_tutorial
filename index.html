@@ -12,7 +12,8 @@
 <script src="app.js"></script>
 <script type="text/babel">
   // React code goes here.
-  
+
+  /*
   const OurFirstComponent = () => {
     return (
     //stuff to make this component goes here
@@ -30,27 +31,57 @@
     );
   }
 
+  const placeWeWantToPutComponent = document.getElementById('hook');
+  //const secondplaceWeWantToPutComponent = document.getElementById('hook');
+  ReactDOM.render(Container(), placeWeWantToPutComponent);  
+
+  */
+
   //another way to write class components
   //class components must have a function called `render()`, which returns the JSX
   //of the component. 
-  /*
+  function PlayButton(){
+    return <a href="#" title = "Play video" className = "play" />;
+  }
+  
   class Container extends React.Component{
+    constructor(props){
+      super(props);
+      this.state = {isMusicPlaying: false};
+    }
+
+    handleClick(event){
+      //do something when user clicks button
+      if (this.state.isMusicPlaying){
+        this.setState({isMusicPlaying: false});
+      } else{
+        this.setState({isMusicPlaying: true});
+      }
+    };
+    
+    //render function called always, when state changes
     render(){
+      let status = this.state.isMusicPlaying
+      ? 'Playing! :D'//if the state is true for isMusicPlaying
+      : 'Not playing D:'; //if it's not true
       return(
         <div>
-          <h1>I am the parent!</h1>
-          <OurFirstComponent/>
-          </div>
+          //when the user clicks on the h1, our component will
+          //make the handleClick function run 
+          //the purpose of the .bind method is to make sure the 
+          //handleClick refers to the whole component and not just
+          //h1
+          <h1 onClick={this.handleClick.bind(this)}>{ status } </h1>
+          <PlayButton />
+        </div>
       );
     }
   }
 
   const placeWeWantToPutComponent = document.getElementById('hook');
   ReactDOM.render(<Container />, placeWeWantToPutComponent);
-*/
 
-  const placeWeWantToPutComponent = document.getElementById('hook');
-  //const secondplaceWeWantToPutComponent = document.getElementById('hook');
-  ReactDOM.render(Container(), placeWeWantToPutComponent);  
+
+  
   
 </script>
