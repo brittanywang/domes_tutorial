@@ -58,7 +58,7 @@
         this.setState({isMusicPlaying: true});
       }
     };
-    
+
     //render function called always, when state changes
     render(){
       let status = this.state.isMusicPlaying
@@ -72,7 +72,7 @@
           //handleClick refers to the whole component and not just
           //h1
           <h1 onClick={this.handleClick.bind(this)}>{ status } </h1>
-          <PlayButton />
+          <PlayButton isMusicPlaying = {this.state.isMusicPlaying} />
         </div>
       );
     }

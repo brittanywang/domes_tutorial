@@ -5,15 +5,19 @@ A React component represents a piece of the page as shown below. Each component 
 Functions can be written as:
 ```
 <script type="text/babel">
-  function OurFirstComponent() {
+  function MyComponent = (props) => {
     return (
-      <h1>Hello, I am a React Component!</h1>
+      <elementOrComponent .../>
     );
   }
   const placeWeWantToPutComponent = document.getElementById('hook');
-  ReactDOM.render(<OurFirstComponent />, placeWeWantToPutComponent);
+  ReactDOM.render(<MyComponent />, placeWeWantToPutComponent);
 </script>
 
 ```
+
+The function component receives an object of properties which is usually named props. It returns JSX, or JavaScript syntax. Function components cannot have state. A class component is a more featured way to define a React component because it acts like a function that receives props.
+
+
 #H1 Talking Between Components
 `Props` are used as a way for components to interact with one another (from parent to child component). For instance, we can tell the `PlayButton` if music is playing or not.  
